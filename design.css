@@ -1,0 +1,302 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/background.jpg);
+}
+
+body h1 {
+    text-align: center;
+    font-size: 100px;
+    background-color: black;
+    color: green;
+}
+
+body h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 100px;
+    background-color: black;
+    color: darkolivegreen;
+}
+
+main {
+    width: 70%;
+    height: 500px;
+    margin-top: 100px;
+    margin: auto;
+    box-shadow: 0px 0px 3px grey;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    transition: 1s transform ease;
+    position: absolute;
+}
+
+.nav {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.nav button {
+    font-size: 25px;
+}
+
+.about-container, .history-container, .vintage-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.about-text, .history-text, .vintage-text {
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-weight: bold;
+    color: black;
+}
+
+.about-image, .history-image, .vintage-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img, .history-image img, .vintage-image img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+header h1 {
+    font-size: 100px;
+    color: green;
+    margin: 0;
+}
+
+header nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: darkgreen;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+footer {
+    background-color: rgb(31, 30, 30);
+    color: white;
+    padding: 2% 0;
+    text-align: center;
+    font-size: 20px;
+    border-color: aqua;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Dropdown menu styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
+}
+
+.dropdown-content li a {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.dropdown-content li a:hover {
+    background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    body h1, body h6 {
+        font-size: 50px;
+    }
+    
+    main {
+        width: 90%;
+        height: auto;
+    }
+    
+    .about-container, .history-container, .vintage-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-text, .history-text, .vintage-text {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .about-image, .history-image, .vintage-image {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 60px;
+    }
+
+    header nav ul {
+        display: block;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-container input[type="text"] {
+        margin-bottom: 10px;
+    }
+
+    .search-container button {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    body h1, body h6 {
+        font-size: 70px;
+    }
+
+    .about-container, .history-container, .vintage-container {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .about-text, .history-text, .vintage-text {
+        width: 100%;
+    }
+
+    .about-image, .history-image, .vintage-image {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 80px;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul li a {
+        font-size: 18px;
+    }
+}
